@@ -1,6 +1,6 @@
 #Makers BnB
 
-Hello! Simon woz ere!
+[![Stories in Ready](https://badge.waffle.io/kwilson541/makersbnb.png?label=ready&title=Ready)](http://waffle.io/kwilson541/makersbnb)
 
 User Stories
 ------------
