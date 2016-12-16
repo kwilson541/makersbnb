@@ -98,6 +98,11 @@ So that I am guaranteed my space,
 I would like the property-owner to confirm my booking.
 ```
 
+Heroku url
+===========
+You can see our Makersbnb app here
+[Our app url](https://shrouded-sea-19376.herokuapp.com/)
+
 Description
 ===========
 This is the week 6 project at Makers Academy. The task was to design an AirBnB clone - MakersBnB! The collaborators on this project were:
@@ -131,21 +136,34 @@ Technologies
 Setup
 =====
 In order to run this program, you will need to create two databases on your machine. One will allow you to run the tests, the other will allow you to trial the app in development mode. These databases can be set up using PSQL as follows:
+
 1. Open a terminal
+
 2. Enter `psql` into the command line
+
 3. Enter `CREATE DATABASE makersbnb_test;` to create the test database
+
 4. Enter `CREATE DATABASE makersbnb_development;` to create the development database
+
 5. Enter `\q` to quit
 
+
 Once the databases have been created you may set up the app as follows:
+
 1. Fork this repo
+
 2. Clone your forked repo to a desired folder on your computer
+
 3. If you have the bundle gem installed, run `bundle` to install the gems needed for this app. (If you do not have bundle installed, run `gem install bundle` first.)
+
 4. Run `rspec` to perform the tests
 
 To play with the app in the development environment:
+
 1. Run `rackup` to launch a local server
+
 2. In your preferred browser, navigate to `localhost:9292`
+
 
 Notes
 =====
