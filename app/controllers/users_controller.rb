@@ -14,7 +14,7 @@ class MakersBnb < Sinatra::Base
       flash.next[:sign_up_error] = "Passwords do not match Please try again."
       redirect '/users/new'
     else
-      redirect '/listings'
+      redirect '/sessions/new'
     end
   end
 

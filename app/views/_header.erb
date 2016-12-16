@@ -21,14 +21,14 @@
 
   <%if !current_user%>
     <form action="/sessions/new" method="get">
-      <input type="submit" value="Log in">
+      <input class="button" type="submit" value="Log in">
     </form>
   <%end%>
 
   <%if current_user %>
   <form action="/sessions" method="post">
         <input type='hidden' name='_method' value='delete'>
-        <input type='submit' value='log out'>
+        <input class"log-in-btn" type='submit' value='log out'>
     </form>
   <%end%>
 
