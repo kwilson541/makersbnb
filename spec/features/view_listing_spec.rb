@@ -21,8 +21,6 @@ RSpec.feature 'Viewing a individial listing', :type => :feature do
 
   scenario 'user can see a input form to show only available property' do
     visit("/listings")
-    expect(page).to have_content("Available from:")
-    expect(page).to have_content("Available until:")
     expect(page).to have_button("Show Available Property")
   end
 
