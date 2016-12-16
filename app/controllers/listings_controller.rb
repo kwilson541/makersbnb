@@ -33,17 +33,20 @@
 
 	post '/listings/:id/request' do
 		@listing = Listing.first( id: params[:id] )
-
-		if @listing.check_availability( params[:book_from], params[:book_to] )
-			@booking = Booking.create(user_id: current_user.id, listing_id: params[:id], book_from: params[:book_from], book_to: params[:book_to] )
-			@booking.set_date_availability
-			@booking.save
-			redirect "/users/requests"
-		else
-			flash.keep[:notice] = "Sorry, the dates are not available."
+		if @listing.user.id == current_user.id
+			flash.next[:notice] = "You cannot book a property you own."
 			redirect '/listings'
+		else
+			if @listing.check_availability( params[:book_from], params[:book_to] )
+				@booking = Booking.create(user_id: current_user.id, listing_id: params[:id], book_from: params[:book_from], book_to: params[:book_to] )
+				@booking.set_date_availability
+				@booking.save
+				redirect "/users/requests"
+			else
+				flash.keep[:notice] = "Sorry, the dates are not available."
+				redirect '/listings'
+			end
 		end
-
 	end
 
 	post '/listings/sort' do
